@@ -11,7 +11,7 @@ public class Impressora {
 	}
 	
 	public String gerarRelatorio() {
-		String imprime = null;
+		String imprime = "";
 		for (ImprimeExtrato imprimeExtrato : itens) {
 			imprime += imprimeExtrato.gerarExtrato();
 		}
