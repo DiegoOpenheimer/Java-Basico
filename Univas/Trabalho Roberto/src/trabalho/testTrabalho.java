@@ -15,7 +15,7 @@ public class testTrabalho {
 		Medicamento m3 = new Medicamento(03, "remedio3", 10, 6);
 		Estoque e1 = new Estoque();
 		try {
-			e1.guardar(m1);
+			e1.guardar(m1);//esse try deveria ser feito para cada chamada de função
 			e1.guardar(m2);
 		} catch (ProdutoRepetidoException e2) {
 			System.out.println(e2.getMessage());
@@ -95,7 +95,7 @@ public class testTrabalho {
 		Clientes c3 = new Clientes("Luan");
 		
 		try {
-			e1.guardar(m1);
+			e1.guardar(m1);//esse try deveria ser feito para cada chamada de função
 			e1.guardar(m2);
 			e1.guardar(m3);
 			
@@ -111,7 +111,7 @@ public class testTrabalho {
 		Pedido p7 = new Pedido(129, e1);
 		
 		try {
-			p1.addProduto("remedio1", 01, 2); //esse try deveria ser feito para cada chamada de fun��o
+			p1.addProduto("remedio1", 01, 2); //esse try deveria ser feito para cada chamada de função
 			p1.addProduto("remedio1", 01, 2);	
 			p2.addProduto("remedio1", 01, 2);
 			p3.addProduto("remedio2", 02, 2);
